@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Image Viewer</title>
+  </head>
+  <body>
+    <div class="settings">
+      <p>Page Number</p>
+      <input id="pageNumber" type="number" min="1" placeholder="Page number">
+      <p>Increment</p>
+      <input id="increment" type="number" min="1" placeholder="Increment">
+      <p>Book name</p>
+      <input id="bookName" type="text" placeholder="Book name">
+      <br>
+      <button id="copy-button">Rename normal page</button>
+      <br>
+      <button id="copy-bis-button">Rename extra page</button>
+      <br>
+      
+
+
+    </div>
+    <div class="panel">
+      <button id="choose-source">Choose Source</button>
+      <p id="source-path"></p>
+      
+      <ul id="source-list" class="file-list"></ul>
+      <div>
+        <label for="source-sort-by">Sort Source By:</label>
+        <select id="source-sort-by">
+            <option value="date">Date</option>
+            <option value="pageNumber">Page Number</option>
+        </select>
+    
+        <label for="source-sort-order">Order:</label>
+        <select id="source-sort-order">
+            <option value="ascending">Ascending</option>
+            <option value="descending">Descending</option>
+        </select>
+    
+        <button id="sort-source">Sort Source</button>
+    </div>
+    <!-- Display Sorting Scheme for Source Directory -->
+<div id="source-sorting-scheme">Source Sorting Scheme: Not Set</div>
+      <button id="delete-button-source">Delete Selected File in Source</button>
+      <div id="source-panel">
+        <img id="source-image">
+      </div>
+      
+    </div>
+    <div class="panel">
+      <button id="choose-target">Choose Target</button>
+      <p id="target-path"></p>
+      <ul id="target-list" class="file-list"></ul>
+      <div>
+        <label for="target-sort-by">Sort Target By:</label>
+        <select id="target-sort-by">
+            <option value="date">Date</option>
+            <option value="pageNumber">Page Number</option>
+        </select>
+    
+        <label for="target-sort-order">Order:</label>
+        <select id="target-sort-order">
+            <option value="ascending">Ascending</option>
+            <option value="descending">Descending</option>
+        </select>
+    
+        <button id="sort-target">Sort Target</button>
+    </div>
+
+<!-- Display Sorting Scheme for Target Directory -->
+<div id="target-sorting-scheme">Target Sorting Scheme: Not Set</div>
+      <button id="delete-button-target">Delete Selected File in Target</button>
+      <div id="target-panel">
+        <img id="target-image">
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
